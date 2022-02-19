@@ -17,11 +17,6 @@ const Wrapper = styled.div`
   box-shadow: 0 20px 30px ${({theme}) => theme.primaryColors.brightBlueShadow};
 `;
 
-const StyledImg = styled.img`
-  object-fit: contain;
-  max-width: 100%;
-`;
-
 const Content = styled.div`
   padding: 30px 50px;
   display: flex;
@@ -54,14 +49,14 @@ const OrderSummary = () => {
 
     return (
         <Wrapper>
-            <StyledImg src={IllustrationHero} alt="IllustrationHero"/>
+            <img src={IllustrationHero} alt="IllustrationHero"/>
             <Content>
                 <Title>Order Summary</Title>
                 <Paragraph>You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you
                     like!</Paragraph>
                 <CartItem/>
-                <Button type='proceed' onClick={handleClick}>Proceed to Payment</Button>
-                <Button type='cancel' onClick={handleClick}>Cancel Order</Button>
+                <Button onClick={handleClick}>Proceed to Payment</Button>
+                <Button isCancel onClick={handleClick}>Cancel Order</Button>
             </Content>
         </Wrapper>
     )

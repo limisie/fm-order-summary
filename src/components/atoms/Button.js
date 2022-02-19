@@ -21,21 +21,25 @@ const ProceedButton = styled(StyledButton)`
   box-shadow: 0 15px 15px ${({theme}) => theme.primaryColors.brightBlueShadow};
   border: none;
   z-index: 1;
+
+  &:hover {
+    background-color: ${({theme}) => theme.complementaryColors.darkBlue};
+  }
 `;
 
-const CandelButton = styled(StyledButton)`
+const CancelButton = styled(StyledButton)`
   color: ${({theme}) => theme.complementaryColors.desaturatedBlue};
   background-color: white;
   border: none;
+  
+  &:hover {
+    background-color: ${({theme}) => theme.complementaryColors.paleBlue};
+  }
 `;
 
-const Button = ({type, children, ...props}) => {
-    switch (type) {
-        case 'cancel':
-            return <CandelButton {...props}>{children}</CandelButton>
-        default:
-            return <ProceedButton {...props}>{children}</ProceedButton>
-    }
-};
+const Button = ({isCancel, children, ...props}) =>
+    isCancel ?
+        <CancelButton {...props}>{children}</CancelButton> :
+        <ProceedButton {...props}>{children}</ProceedButton>;
 
 export default Button;

@@ -22,14 +22,14 @@ const ItemInfo = styled.div`
   align-content: start;
   padding: 10px;
 
-  p:first-child {
+  h3 {
     font-weight: ${({theme}) => theme.fontWeights.bolder};
     font-size: ${({theme}) => theme.fontSizes.s};
     color: ${({theme}) => theme.complementaryColors.darkBlue};
     margin: 0;
   }
 
-  p:last-child {
+  p {
     font-weight: ${({theme}) => theme.fontWeights.light};
     font-size: ${({theme}) => theme.fontSizes.s};
     color: ${({theme}) => theme.complementaryColors.desaturatedBlue};
@@ -45,13 +45,17 @@ const StyledLink = styled.a`
   margin-left: auto;
   padding-right: 10px;
   align-self: center;
+  
+  &:hover {
+    color: ${({theme}) => theme.complementaryColors.darkBlue};
+  }
 `;
 
 const CartItem = () => (
     <Wrapper>
         <ItemIcon/>
         <ItemInfo>
-            <p>Annual Plan</p>
+            <h3>Annual Plan</h3>
             <p>$59.99/year</p>
         </ItemInfo>
         <StyledLink href='/'>Change</StyledLink>

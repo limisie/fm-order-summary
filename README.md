@@ -47,21 +47,10 @@ A learned how to include SVG background:
 ```js
 import desktopSVG from '../../assets/images/pattern-background-desktop.svg'
 ```
-```js
-const Background = styled.div`
-  background: url(${desktopSVG}) no-repeat;
- `
+
+```css
+background: url(${desktopSVG}) no-repeat fixed;
  ```
-and a responsive image inside a flexbox:
-```js
-const StyledImg = styled.img`
-  object-fit: contain;
-  max-width: 100%;
-`;
-```
-```js
-<StyledImg src={IllustrationHero} alt="IllustrationHero"/>
-```
 
 ### Useful resources
 
