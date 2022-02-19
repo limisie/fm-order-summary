@@ -31,10 +31,10 @@ const CandelButton = styled(StyledButton)`
 
 const Button = ({type, children, ...props}) => {
     switch (type) {
-        case 'proceed':
-            return <ProceedButton {...props}>{children}</ProceedButton>
         case 'cancel':
             return <CandelButton {...props}>{children}</CandelButton>
+        default:
+            return <ProceedButton {...props}>{children}</ProceedButton>
     }
 };
 
