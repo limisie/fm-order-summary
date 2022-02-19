@@ -4,7 +4,6 @@ import desktopSVG from '../../assets/images/pattern-background-desktop.svg'
 import mobileSVG from '../../assets/images/pattern-background-mobile.svg'
 
 const Background = styled.div`
-  content: '';
   position: absolute;
   height: 100%;
   width: 100%;
