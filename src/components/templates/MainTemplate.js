@@ -8,8 +8,9 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 90px 20px;
+  height: 100vh;
   background: url(${desktopSVG}) no-repeat fixed;
+  background-size: contain;
 
   @media (max-width: ${({theme}) => theme.widths.mobile}) {
     background-image: url(${mobileSVG});
